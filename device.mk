@@ -45,6 +45,9 @@ PRODUCT_HOST_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Shipping API level
+PRODUCT_SHIPPING_API_LEVEL := 29
+
 # Encryption
 PRODUCT_PACKAGES += \
     qcom_decrypt \
@@ -64,5 +67,9 @@ RECOVERY_LIBRARY_SOURCE_FILES += \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/vendor.display.config@2.0.so \
     $(TARGET_OUT_SYSTEM_EXT_SHARED_LIBRARIES)/libdisplayconfig.qti.so \
 
-PRODUCT_COPY_FILES += \
-    $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+#PRODUCT_COPY_FILES += \
+#    $(OUT_DIR)/target/product/$(PRODUCT_RELEASE_NAME)/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so
+
+# Include files in non-free and twrp
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)/non-free
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)/twrp
