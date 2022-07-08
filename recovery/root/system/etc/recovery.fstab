@@ -37,7 +37,7 @@ vendor                                                  /vendor                e
 odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb,logical,first_stage_mount
 /dev/block/by-name/metadata                             /metadata              ext4    noatime,nosuid,nodev,discard,sync                    wait,check,formattable,wrappedkey,first_stage_mount
 #/dev/block/bootdevice/by-name/op2                       /mnt/vendor/op2        ext4    noatime,nosuid,nodev,barrier=1,data=ordered          wait,check
-/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,inlinecrypt             latemount,wait,check,formattable,quota,reservedsize=512M,fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption
+/dev/block/bootdevice/by-name/userdata                  /data                  f2fs    noatime,nosuid,nodev,discard,inlinecrypt             latemount,wait,check,formattable,quota,reservedsize=512M,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,wrappedkey,keydirectory=/metadata/vold/metadata_encryption
 #/dev/block/bootdevice/by-name/persist                   /mnt/vendor/persist    ext4    noatime,nosuid,nodev,barrier=1                       wait
 /dev/block/bootdevice/by-name/misc                      /misc                  emmc    defaults                                             defaults
 #/devices/platform/soc/8804000.sdhci/mmc_host*           /storage/sdcard1       vfat    nosuid,nodev                                         wait,voldmanaged=sdcard1:auto,encryptable=footer
