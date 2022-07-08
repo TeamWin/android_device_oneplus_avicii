@@ -120,6 +120,7 @@ RECOVERY_BINARY_SOURCE_FILES += $(TARGET_OUT_EXECUTABLES)/strace
 # TWRP Specific Build Flags
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_DEFAULT_BRIGHTNESS := 200
+TW_MAX_BRIGHTNESS := 1023
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_EXCLUDE_APEX := true
