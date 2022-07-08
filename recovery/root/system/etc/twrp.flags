@@ -1,6 +1,4 @@
 # mount point   fstype  device                  device2            flags
-/metadata   ext4    /dev/block/bootdevice/by-name/metadata
-/data       f2fs    /dev/block/bootdevice/by-name/userdata          flags=fileencryption=ice;wrappedkey;keydirectory=/metadata/vold/metadata_encryption
 /boot       emmc    /dev/block/bootdevice/by-name/boot              flags=slotselect
 /dtbo       emmc    /dev/block/bootdevice/by-name/dtbo              flags=backup=1;display="Dtbo";flashimg=1;slotselect
 /firmware   vfat    /dev/block/bootdevice/by-name/modem             flags=slotselect;display="Firmware";mounttodecrypt;fsflags=ro
@@ -17,11 +15,6 @@
 /persist_image emmc    /dev/block/bootdevice/by-name/persist        flags=display="Persist";flashimg=1
 /storage    f2fs    /data/media/0                                   flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 /op2        ext4    /dev/block/bootdevice/by-name/op2   
-
-system      /system         ext4        slotselect;logical
-vendor      /vendor         ext4        slotselect;display="Vendor";logical
-product     /product        ext4        slotselect;display="Product";logical
-odm         /odm            ext4        slotselect;display="Odm";logical
 
 # Removable storage
 /usb_otg    vfat    /dev/block/sdg1             /dev/block/sdg     flags=fsflags=utf8;display="USB-Storage";storage;wipeingui;removable
