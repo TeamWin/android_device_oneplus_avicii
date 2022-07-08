@@ -29,19 +29,19 @@ do
 done
 
 # for qseecomd
-go system/lib64
+go vendor/lib64
 for x in libQSEEComAPI.so libdrmfs.so libdiag.so libssd.so librpmb.so libqdutils.so
 do
 	cp "$1/vendor/lib64/$x" .
 done
 
 # for gatekeeper
-go system/lib64/hw
+go vendor/lib64/hw
 for x in android.hardware.gatekeeper@1.0-impl-qti.so
 do
 	cp "$1/vendor/lib64/hw/$x" .
 done
-go system/lib64
+go vendor/lib64
 for x in libqtikeymaster4.so libkeymasterdeviceutils.so libkeymasterutils.so libqcbor.so
 do
 	cp "$1/vendor/lib64/$x" .
