@@ -132,7 +132,6 @@ TW_INCLUDE_REPACKTOOLS := true
 TW_INCLUDE_RESETPROP := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_FSCRYPT_POLICY := 1
-TW_USE_TOOLBOX := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TW_HAS_EDL_MODE := true
 TW_OVERRIDE_SYSTEM_PROPS := \
